@@ -2,6 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "../assets/images/logo.svg"; 
 import banner from "../assets/images/banner.png";
+import { Link } from "react-router-dom";
 
 const IntroScreen = () => {
   return (
@@ -11,12 +12,20 @@ const IntroScreen = () => {
           <img
             src={logo}
             alt="Logo da Biblioteca"
-            style={{ width: "100px" }}
+            style={{ width: "70px" }}
           />
         </div>
         <div>
-          <button className="btn btn-outline-light me-2">Entrar</button>
-          <button className="btn btn-light">Cadastrar</button>
+          <button className="btn btn-outline-light me-2">
+            <Link to="/login" className="text-decoration-none text-dark">
+              Entrar
+            </Link>
+          </button>
+          <button className="btn btn-light">
+            <Link to="/cadastro" className="text-decoration-none text-dark">
+              Cadastrar
+            </Link>
+          </button>
         </div>
       </header>
 
@@ -27,7 +36,7 @@ const IntroScreen = () => {
               <img
                 src={banner}
                 alt="Imagem que representa uma biblioteca"
-                style={{ width: "90%" }}
+                style={{ width: "70%" }}
               />
             </div>
           </div>
@@ -60,7 +69,7 @@ const IntroScreen = () => {
           <img
             src={logo}
             alt="Logo da Biblioteca"
-            style={{ width: "100px" }}
+            style={{ width: "50px" }}
           />
         </div>
       </footer>
